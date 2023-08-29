@@ -1,0 +1,21 @@
+
+/* Remove default margin and padding */
+*{
+  margin :0;
+  padding :0;
+  box-sizing: border-box;
+}
+
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+}
+
+

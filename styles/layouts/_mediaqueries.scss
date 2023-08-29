@@ -1,0 +1,59 @@
+@media (min-width: 768px) {
+
+.button-container{
+    display: flex;
+}
+
+.restaurants {
+    padding :30px 180px 30px 180px !important;
+}
+
+.restaurants-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+
+        .card {
+            width: 45% !important;
+        }
+
+}
+
+
+
+
+.meal-selection {
+    padding: 50px 180px 50px 180px !important ;
+}
+
+.meal-selection button {
+    width: 30%;
+  }
+
+.meal-reservation h1 {
+   font-size:  40px !important;
+}
+
+
+footer {
+    display: flex;
+    flex-direction:row-reverse;
+    gap: 16px;
+    padding: 30px 25px 30px 25px;
+    
+
+    ul {
+        display : flex;
+        gap:7px;
+        margin-top: 0;
+
+        li {
+            margin-right: 1em;
+            
+        }
+    }
+}
+
+
+}
