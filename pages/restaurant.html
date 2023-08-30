@@ -4,108 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="header-restaurant">
         <div class="logo">
-          <img src="/images/logo/ohmyfood.png" alt="Logo du site ohmyfood" />
+            <!-- lien de retour vers la page principale -->
+            <a href="index.html" class="arrow-icon"><i class="fa-solid fa-arrow-left "></i></a>
+            <div class="img-container">
+                <img src="/images/logo/ohmyfood.png" alt="Logo du site ohmyfood" />
+            </div>
         </div>
     </header>
-    <main>
+    <main class="main-restaurant">
         <div class="image-container">
             <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image">
-            <div class="overlay-div">
-                <h1>La palette du goût</h1>
-                <div class="meal-starter">
-                    <h2>entrées</h2> 
-                    <article class="article-menu" id="article_1">
-                        <div class="description">
-                            <h4>Tarte de pouple acidulé</h4>
-                            <p>Aux zests d'orange</p>
-                        </div>
-                        <div class="price"><p>25€</p></div>
-                    </article>
-                    <article class="article-menu" id="article_2">
-                        <div class="description">
-                            <h4>Velouté de légumes d'antan</h4>
-                            <p>Carottes, panais, topinambour</p>
-                        </div>
-                        <div class="price"><p>35€</p></div>
-                    </article>
-                    <article class="article-menu" id="article_3">
-                        <div class="description">
-                            <h4>Soupe à l'oignon</h4>
-                            <p>Revisitée</p>
-                        </div>
-                        <div class="price"><p>20€</p></div>
-                    </article>
+                <div class="overlay-div">
+                    <div class="title-container">
+                        <h1>La palette du goût</h1>
+                        <i class="fa-regular fa-heart fav-icon-restaurant"></i>
+                    </div>
+                    <div class="meal-starter">
+                        <h2>entrées</h2> 
+                        <article class="article-menu" id="article_1">
+                            <div class="description">
+                                <h4>Tarte de pouple acidulé</h4>
+                                <p>Aux zests d'orange</p>
+                            </div>
+                            <div class="price"><p>25€</p></div>
+                        </article>
+                        <article class="article-menu" id="article_2">
+                            <div class="description">
+                                <h4>Velouté de légumes d'antan</h4>
+                                <p>Carottes, panais, topinambour</p>
+                            </div>
+                            <div class="price"><p>35€</p></div>
+                        </article>
+                        <article class="article-menu" id="article_3">
+                            <div class="description">
+                                <h4>Soupe à l'oignon</h4>
+                                <p>Revisitée</p>
+                            </div>
+                            <div class="price"><p>20€</p></div>
+                        </article>
+                    </div>
+                    <div class="meal-starter">
+                        <h2>plats</h2> 
+                        <article class="article-menu" id="article_1">
+                            <div class="description">
+                                <h4>Tarte de pouple acidulé</h4>
+                                <p>Aux zests d'orange</p>
+                            </div>
+                            <div class="price"><p>25€</p></div>
+                        </article>
+                        <article class="article-menu" id="article_2">
+                            <div class="description">
+                                <h4>Velouté de légumes d'antan</h4>
+                                <p>Carottes, panais, topinambour</p>
+                            </div>
+                            <div class="price"><p>35€</p></div>
+                        </article>
+                        <article class="article-menu" id="article_3">
+                            <div class="description">
+                                <h4>Soupe à l'oignon</h4>
+                                <p>Revisitée</p>
+                            </div>
+                            <div class="price"><p>20€</p></div>
+                        </article>
+                    </div>
+                    <div class="meal-starter">
+                        <h2>desserts</h2> 
+                        <article class="article-menu" id="article_1">
+                            <div class="description">
+                                <h4>Tarte de pouple acidulé</h4>
+                                <p>Aux zests d'orange</p>
+                            </div>
+                            <div class="price"><p>25€</p></div>
+                        </article>
+                        <article class="article-menu" id="article_2">
+                            <div class="description">
+                                <h4>Velouté de légumes d'antan</h4>
+                                <p>Carottes, panais, topinambour</p>
+                            </div>
+                            <div class="price"><p>35€</p></div>
+                        </article>
+                        <article class="article-menu" id="article_3">
+                            <div class="description">
+                                <h4>Soupe à l'oignon</h4>
+                                <p>Revisitée</p>
+                            </div>
+                            <div class="price"><p>20€</p></div>
+                        </article>
+                    </div>
+                    <button class="action-button">Commander</button>    
                 </div>
-                <div class="meal-starter">
-                    <h2>plats</h2> 
-                    <article class="article-menu" id="article_1">
-                        <div class="description">
-                            <h4>Tarte de pouple acidulé</h4>
-                            <p>Aux zests d'orange</p>
-                        </div>
-                        <div class="price"><p>25€</p></div>
-                    </article>
-                    <article class="article-menu" id="article_2">
-                        <div class="description">
-                            <h4>Velouté de légumes d'antan</h4>
-                            <p>Carottes, panais, topinambour</p>
-                        </div>
-                        <div class="price"><p>35€</p></div>
-                    </article>
-                    <article class="article-menu" id="article_3">
-                        <div class="description">
-                            <h4>Soupe à l'oignon</h4>
-                            <p>Revisitée</p>
-                        </div>
-                        <div class="price"><p>20€</p></div>
-                    </article>
-                </div>
-                <div class="meal-starter">
-                    <h2>desserts</h2> 
-                    <article class="article-menu" id="article_1">
-                        <div class="description">
-                            <h4>Tarte de pouple acidulé</h4>
-                            <p>Aux zests d'orange</p>
-                        </div>
-                        <div class="price"><p>25€</p></div>
-                    </article>
-                    <article class="article-menu" id="article_2">
-                        <div class="description">
-                            <h4>Velouté de légumes d'antan</h4>
-                            <p>Carottes, panais, topinambour</p>
-                        </div>
-                        <div class="price"><p>35€</p></div>
-                    </article>
-                    <article class="article-menu" id="article_3">
-                        <div class="description">
-                            <h4>Soupe à l'oignon</h4>
-                            <p>Revisitée</p>
-                        </div>
-                        <div class="price"><p>20€</p></div>
-                    </article>
-                </div>
-                <footer>
-                    <h3>oh my food</h3>
-                    <ul>
-                      <li><i class="fa-solid fa-utensils footer-icon" ></i><a href="#">Proposer un restaurant</a></li>
-                      <li><i class="fa-solid fa-handshake-angle footer-icon"></i><a href="#">Devenir partenaire</a></li>
-                      <li><a href="#">Mentions Légales</a></li>
-                      <li><a href="#">Contact</a></li>
-                    </ul>
-                  </footer>
-            </div>
+                
+
+                
             
         </div>
         
     </main>
+    <footer>
+        <h3><a href="#">ohmyfood</a></h3>
+        <ul>
+          <li><i class="fa-solid fa-utensils footer-icon" ></i><a href="#">Proposer un restaurant</a></li>
+          <li><i class="fa-solid fa-handshake-angle footer-icon"></i><a href="#">Devenir partenaire</a></li>
+          <li><a href="#">Mentions Légales</a></li>
+          <li><a href="mailto:contact@ofmyfood.com">Contact</a></li>
+        </ul>
+    </footer>
     
 </body>
 </html>

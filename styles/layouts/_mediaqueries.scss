@@ -41,7 +41,6 @@ footer {
     flex-direction:row-reverse;
     gap: 16px;
     padding: 30px 25px 30px 25px;
-    
 
     ul {
         display : flex;
@@ -54,6 +53,32 @@ footer {
         }
     }
 }
+
+.overlay-div {
+
+    .title-container{
+        justify-content: center !important;
+
+        .fav-icon-restaurant {
+            margin-left: 30px;
+        }
+    }
+
+    
+
+    h1 {
+        text-align: center;
+    }
+
+    .meal-starter{
+        width: 634px;
+        margin: auto;
+    }
+}
+
+
+
+
 
 
 }

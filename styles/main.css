@@ -17,15 +17,14 @@ ul {
   list-style: none;
 }
 
-.meal-reservation button {
+.action-button {
   border-radius: 25px;
   width: 218px;
   height: 50px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  margin-bottom: 24px;
+  margin: 35px auto 35px auto;
   color: white;
   border: none;
-  margin-top: 12px;
   font-size: 16px;
   font-weight: 500;
 }
@@ -135,6 +134,19 @@ footer .footer-icon {
   footer ul li {
     margin-right: 1em;
   }
+  .overlay-div .title-container {
+    justify-content: center !important;
+  }
+  .overlay-div .title-container .fav-icon-restaurant {
+    margin-left: 30px;
+  }
+  .overlay-div h1 {
+    text-align: center;
+  }
+  .overlay-div .meal-starter {
+    width: 634px;
+    margin: auto;
+  }
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -146,13 +158,13 @@ header {
 
 .logo {
   text-align: center;
-  height: 63px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .logo img {
   width: 197px;
   height: 36px;
-  margin-top: 14px;
 }
 
 .location {
@@ -175,7 +187,6 @@ main {
   text-align: center;
 }
 .meal-reservation h1 {
-  height: 68px;
   padding-top: 36px;
   font-size: 24px;
   font-weight: 700;
@@ -240,7 +251,6 @@ main {
 }
 
 .image-container {
-  position: relative;
   width: 100%;
 }
 .image-container img {
@@ -250,19 +260,32 @@ main {
      object-fit: cover;
 }
 
-.overlay-div {
-  position: absolute;
-  top: 200px;
-  left: 0;
+.container-menu {
+  background-color: white;
   width: 100%;
+  height: 1215px;
+}
+
+.overlay-div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -50px;
+  width: 100%;
+  max-width: 1055px;
+  margin: auto;
   justify-content: center;
-  height: 400px; /* Ajustez cette valeur pour contrôler la partie chevauchée */
   background-color: #F6F6F6;
   border-radius: 30px 30px 0 0;
   padding: 15px;
 }
-.overlay-div h1 {
+.overlay-div .title-container {
+  display: flex;
+  align-items: center;
   margin-top: 20px;
+  justify-content: space-between;
+}
+.overlay-div h1 {
   font-style: italic;
   font-weight: 400;
   font-size: 28px;
@@ -273,7 +296,7 @@ main {
   font-size: 16px;
   color: grey;
   font-weight: normal;
-  margin-top: 20px;
+  margin-top: 30px;
   padding-bottom: 1rem;
   position: relative;
 }
@@ -295,4 +318,30 @@ main {
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
   border-radius: 15px;
   background-color: white;
+  margin-top: 10px;
+}
+
+.main-restaurant {
+  background-color: white;
+  margin-bottom: -50px;
+}
+
+.header-restaurant .logo {
+  display: flex;
+  align-items: center;
+}
+.header-restaurant .logo .arrow-icon {
+  font-size: 24px;
+  padding-left: 30px;
+}
+.header-restaurant .logo .img-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-restaurant .logo img {
+  text-align: center;
+  margin: auto;
+  padding-right: 30px;
 }/*# sourceMappingURL=main.css.map */
