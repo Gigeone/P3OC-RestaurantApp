@@ -25,8 +25,14 @@ ul {
   margin: 35px auto 35px auto;
   color: white;
   border: none;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   font-size: 16px;
   font-weight: 500;
+  transition: all 1000ms;
+}
+.action-button:hover {
+  filter: brightness(1.25);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2509803922);
 }
 
 .meal-selection button {
@@ -154,17 +160,14 @@ body {
 
 header {
   width: 100%;
-}
-
-.logo {
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
-.logo img {
+header img {
   width: 197px;
   height: 36px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .location {
@@ -326,22 +329,34 @@ main {
   margin-bottom: -50px;
 }
 
-.header-restaurant .logo {
+.header-restaurant {
   display: flex;
-  align-items: center;
 }
-.header-restaurant .logo .arrow-icon {
+.header-restaurant .arrow-icon {
   font-size: 24px;
-  padding-left: 30px;
+  position: relative;
+  left: 30px;
+  top: 22px;
 }
-.header-restaurant .logo .img-container {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header-restaurant .logo img {
+.header-restaurant img {
   text-align: center;
   margin: auto;
-  padding-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.fill {
+  color: black;
+  cursor: pointer;
+}
+.fill:hover {
+  animation: fill 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */
