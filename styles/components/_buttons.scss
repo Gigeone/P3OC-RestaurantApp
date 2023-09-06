@@ -29,35 +29,37 @@
   margin: 24px auto auto auto ;
   position: relative;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bold;
+  .number {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color:#9356DC;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  .logo-button{
+    width: 16px;
+    height: 16px;
+    color: grey;
+    margin-right: 12px;
+    margin-left: 45px;
+  }
+  .logo-button-purple {
+    color: #9356DC;
+  }
 }
 
-.number {
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color:#9356DC;
-  color: white;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 20px;
-  font-size: 14px;
-}
 
 
 
 
-.logo-button{
-  width: 16px;
-  height: 16px;
-  color: grey;
-  margin-right: 12px;
-  margin-left: 45px;
-}
 
-.logo-button-purple {
-  color: #9356DC;
-}
+
+

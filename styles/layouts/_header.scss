@@ -1,0 +1,21 @@
+header {
+    width: 100%;
+    text-align: center;
+    img {
+        width:197px;     // S'assure que l'image ne dépasse pas la largeur de son conteneur
+        height: 36px;        // Garantit que l'image conserve son rapport hauteur/largeur
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .location {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#EAEAEA;
+        height: 50px;
+        p {
+            margin-left: 14px;
+          }
+    }
+  }
+

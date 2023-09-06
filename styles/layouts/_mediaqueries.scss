@@ -25,11 +25,11 @@
 
 .meal-selection {
     padding: 50px 180px 50px 180px !important ;
+    button {
+        width: 30%;
+    }
 }
 
-.meal-selection button {
-    width: 30%;
-  }
 
 .meal-reservation h1 {
    font-size:  40px !important;
@@ -55,21 +55,15 @@ footer {
 }
 
 .overlay-div {
-
     .title-container{
         justify-content: center !important;
-
         .fav-icon-restaurant {
             margin-left: 30px;
         }
     }
-
-    
-
     h1 {
         text-align: center;
     }
-
     .meal-starter{
         width: 634px;
         margin: auto;
