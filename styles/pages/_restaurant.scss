@@ -1,3 +1,5 @@
+@import '../utils/animations';
+
 .header-restaurant {
     display: flex;
       .arrow-icon {
@@ -44,6 +46,12 @@
                 align-items: center;
                 margin-top: 20px;
                 justify-content: space-between;
+            }
+                //ADD
+            .meal-starter { 
+                opacity: 0;
+                transition: transform 0.5s  ease-in-out 4s;
+                
             }
             
           
@@ -128,9 +136,22 @@
                 &:hover {
                     .menu-item-check {
                         margin-right: 0;
-                    }; 
+                    }
                 }
           
             }
         }
 }
+
+.item1 {
+    animation: fadeIn 4s ease 0s forwards;;
+}
+
+.item2 {
+    animation: fadeIn 4s ease 1s forwards;
+}
+
+.item3 {
+    animation: fadeIn 4s ease 2s forwards;
+}
+

@@ -37,6 +37,22 @@ ul {
     transform: scale(0);
   }
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .action-button {
   border-radius: 25px;
   width: 218px;
@@ -121,6 +137,22 @@ ul {
   }
   100% {
     transform: scale(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 .preloader {
@@ -309,6 +341,38 @@ main .restaurants .restaurants-cards .card .fav-icon {
     margin: auto;
   }
 }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .header-restaurant {
   display: flex;
 }
@@ -354,6 +418,10 @@ main .restaurants .restaurants-cards .card .fav-icon {
   align-items: center;
   margin-top: 20px;
   justify-content: space-between;
+}
+.main-restaurant .overlay-div .meal-starter {
+  opacity: 0;
+  transition: transform 0.5s ease-in-out 4s;
 }
 .main-restaurant .overlay-div h1 {
   font-style: italic;
@@ -430,6 +498,18 @@ main .restaurants .restaurants-cards .card .fav-icon {
 }
 .main-restaurant .overlay-div article:hover .menu-item-check {
   margin-right: 0;
+}
+
+.item1 {
+  animation: fadeIn 4s ease 0s forwards;
+}
+
+.item2 {
+  animation: fadeIn 4s ease 1s forwards;
+}
+
+.item3 {
+  animation: fadeIn 4s ease 2s forwards;
 }
 
 .fill {
