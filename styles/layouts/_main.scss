@@ -1,5 +1,7 @@
+@import '../utils/animations';
+
 main {
-    background-color: #F6F6F6;
+    background-color: $grey-color;
     .meal-reservation{
         text-align: center;
             h1 {
@@ -8,14 +10,52 @@ main {
               font-weight: 700;
             }
             p {
-              height: 46px;
               font-size: 18px;
+              font-weight: 300;
               margin-top: 12px;
             }
     }
     .meal-selection{
         background-color: white;
         padding: 50px 15px;
+        li {
+            border-radius: 20px;
+            width: 322px;
+            height: 72px;
+            background-color: $grey-color;
+            color: black;
+            border: none;
+            display: flex;
+            align-items: center;
+            margin: 24px auto auto auto ;
+            position: relative;
+            font-size: 16px;
+            font-weight: bold;
+            .number {
+              position: absolute;
+              left: -10px;
+              top: 50%;
+              transform: translateY(-50%);
+              background-color:$purple-color;
+              color: white;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              text-align: center;
+              line-height: 20px;
+              font-size: 14px;
+            }
+            .logo-sel{
+              width: 16px;
+              height: 16px;
+              color: grey;
+              margin-right: 12px;
+              margin-left: 45px;
+            }
+            .logo-sel-purple {
+              color: $purple-color;
+            }
+        }
     }
     .restaurants {
         padding: 30px 15px;
@@ -39,6 +79,23 @@ main {
                 position: absolute;
                 right: 20px;
                 bottom: 20px;
+                cursor: pointer;
+                transition: all 200ms ease-in-out;
+            }
+            #toggle1, #toggle2, #toggle3, #toggle4  {
+                display: none;
+            }
+              
+            #toggle1:checked ~ label .fill,
+            #toggle2:checked ~ label .fill,
+            #toggle3:checked ~ label .fill,
+            #toggle4:checked ~ label .fill {
+                  background:$purple-gradient-color;
+                  background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color:transparent;
+                  font-weight: bold;
             }
         }
     }

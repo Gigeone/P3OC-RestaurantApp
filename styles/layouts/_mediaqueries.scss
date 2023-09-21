@@ -1,7 +1,64 @@
-@media (min-width: 768px) {
+@media (min-width: 560px) {
+    .meal-selection {
+        padding: 50px 50px!important;
+        h2 {
+            text-align: center;
+        }
+        
+    }
+    .restaurants {
+        padding: 50px 50px!important;
+        h2 {
+            text-align: center;
+        }
+        .restaurants-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            .card {
+                width: 45% !important;
+                margin : 24px 0 0 0 !important;
+            }
+        
+        }
+    } 
+    footer {
+        display: flex;
+        flex-direction:row-reverse;
+        padding: 30px 25px 30px 25px;
+    
+        ul {
+            display : flex;
+            gap:7px;
+            margin-top: 0;
+    
+            li {
+                margin-right: 1em;
+                
+            }
+        }
+    } 
+}
+
+
+@media (min-width: 1360px) {
 
 .button-container{
     display: flex;
+}
+
+h2 {
+    text-align: left !important;
+}
+.meal-selection {
+    ul {
+        justify-content: space-between;
+    }
+    li {
+        margin: 24px 0 0 0 !important; 
+    }
+
 }
 
 .restaurants {
@@ -13,19 +70,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2rem;
-
-        .card {
-            width: 45% !important;
-        }
+    .card {
+        width: 45% !important;
+        margin : 24px 0 0 0 !important;
+    }
 
 }
 
-
-
-
 .meal-selection {
     padding: 50px 180px 50px 180px !important ;
-    button {
+    li {
         width: 30%;
     }
 }
@@ -64,15 +118,9 @@ footer {
     h1 {
         text-align: center;
     }
-    .meal-starter{
+    .category-menu{
         width: 634px;
         margin: auto;
     }
 }
-
-
-
-
-
-
 }

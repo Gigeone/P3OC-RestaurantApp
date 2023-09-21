@@ -10,28 +10,9 @@
 @import 'layouts/mediaqueries';
 @import 'pages/restaurant';
 
-.fill {
-  color: black;
-  cursor: pointer;
-}
 
-#toggle, #toggle1, #toggle2, #toggle3, #toggle4  {
-  display: none;
-}
 
-#toggle:checked ~ label .fill,
-#toggle1:checked ~ label .fill,
-#toggle2:checked ~ label .fill,
-#toggle3:checked ~ label .fill,
-#toggle4:checked ~ label .fill
-  {
-    opacity: 1;
-    background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:transparent;
-    font-weight: bold;
-  }
+
 
 
   

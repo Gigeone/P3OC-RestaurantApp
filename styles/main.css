@@ -57,7 +57,7 @@ ul {
   border-radius: 25px;
   width: 218px;
   height: 50px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   margin: 35px auto 35px auto;
   color: white;
   border: none;
@@ -69,45 +69,6 @@ ul {
 .action-button:hover {
   filter: brightness(1.25);
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2509803922);
-}
-
-.meal-selection button {
-  border-radius: 20px;
-  width: 322px;
-  height: 72px;
-  background-color: #F6F6F6;
-  color: black;
-  border: none;
-  display: flex;
-  align-items: center;
-  margin: 24px auto auto auto;
-  position: relative;
-  font-size: 16px;
-  font-weight: bold;
-}
-.meal-selection button .number {
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #9356DC;
-  color: white;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 20px;
-  font-size: 14px;
-}
-.meal-selection button .logo-button {
-  width: 16px;
-  height: 16px;
-  color: grey;
-  margin-right: 12px;
-  margin-left: 45px;
-}
-.meal-selection button .logo-button-purple {
-  color: #9356DC;
 }
 
 .new-sticker {
@@ -172,7 +133,7 @@ ul {
   animation-fill-mode: forwards;
 }
 .preloader h1 {
-  color: #000000;
+  color: black;
   font-size: 3.5rem;
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -217,7 +178,7 @@ footer li {
 footer .footer-icon {
   width: 11px;
   height: 13px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 header {
@@ -237,12 +198,60 @@ header .location {
   background-color: #EAEAEA;
   height: 50px;
 }
-header .location p {
+header .location input {
   margin-left: 14px;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  padding: 5px 0;
+}
+header .location input::-moz-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+header .location input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 main {
-  background-color: #F6F6F6;
+  background-color: #F3F3F3;
 }
 main .meal-reservation {
   text-align: center;
@@ -253,13 +262,51 @@ main .meal-reservation h1 {
   font-weight: 700;
 }
 main .meal-reservation p {
-  height: 46px;
   font-size: 18px;
+  font-weight: 300;
   margin-top: 12px;
 }
 main .meal-selection {
   background-color: white;
   padding: 50px 15px;
+}
+main .meal-selection li {
+  border-radius: 20px;
+  width: 322px;
+  height: 72px;
+  background-color: #F3F3F3;
+  color: black;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin: 24px auto auto auto;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+}
+main .meal-selection li .number {
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #9356DC;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+}
+main .meal-selection li .logo-sel {
+  width: 16px;
+  height: 16px;
+  color: grey;
+  margin-right: 12px;
+  margin-left: 45px;
+}
+main .meal-selection li .logo-sel-purple {
+  color: #9356DC;
 }
 main .restaurants {
   padding: 30px 15px;
@@ -286,11 +333,73 @@ main .restaurants .restaurants-cards .card .fav-icon {
   position: absolute;
   right: 20px;
   bottom: 20px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+main .restaurants .restaurants-cards .card #toggle1, main .restaurants .restaurants-cards .card #toggle2, main .restaurants .restaurants-cards .card #toggle3, main .restaurants .restaurants-cards .card #toggle4 {
+  display: none;
+}
+main .restaurants .restaurants-cards .card #toggle1:checked ~ label .fill,
+main .restaurants .restaurants-cards .card #toggle2:checked ~ label .fill,
+main .restaurants .restaurants-cards .card #toggle3:checked ~ label .fill,
+main .restaurants .restaurants-cards .card #toggle4:checked ~ label .fill {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 560px) {
+  .meal-selection {
+    padding: 50px 50px !important;
+  }
+  .meal-selection h2 {
+    text-align: center;
+  }
+  .restaurants {
+    padding: 50px 50px !important;
+  }
+  .restaurants h2 {
+    text-align: center;
+  }
+  .restaurants .restaurants-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .restaurants .restaurants-cards .card {
+    width: 45% !important;
+    margin: 24px 0 0 0 !important;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 30px 25px 30px 25px;
+  }
+  footer ul {
+    display: flex;
+    gap: 7px;
+    margin-top: 0;
+  }
+  footer ul li {
+    margin-right: 1em;
+  }
+}
+@media (min-width: 1360px) {
   .button-container {
     display: flex;
+  }
+  h2 {
+    text-align: left !important;
+  }
+  .meal-selection ul {
+    justify-content: space-between;
+  }
+  .meal-selection li {
+    margin: 24px 0 0 0 !important;
   }
   .restaurants {
     padding: 30px 180px 30px 180px !important;
@@ -303,11 +412,12 @@ main .restaurants .restaurants-cards .card .fav-icon {
   }
   .restaurants-cards .card {
     width: 45% !important;
+    margin: 24px 0 0 0 !important;
   }
   .meal-selection {
     padding: 50px 180px 50px 180px !important;
   }
-  .meal-selection button {
+  .meal-selection li {
     width: 30%;
   }
   .meal-reservation h1 {
@@ -336,7 +446,7 @@ main .restaurants .restaurants-cards .card .fav-icon {
   .overlay-div h1 {
     text-align: center;
   }
-  .overlay-div .meal-starter {
+  .overlay-div .category-menu {
     width: 634px;
     margin: auto;
   }
@@ -419,17 +529,33 @@ main .restaurants .restaurants-cards .card .fav-icon {
   margin-top: 20px;
   justify-content: space-between;
 }
-.main-restaurant .overlay-div .meal-starter {
-  opacity: 0;
-  transition: transform 0.5s ease-in-out 4s;
-}
-.main-restaurant .overlay-div h1 {
+.main-restaurant .overlay-div .title-container h1 {
   font-style: italic;
   font-weight: 400;
   font-size: 28px;
   font-family: "Shrikhand", cursive;
 }
-.main-restaurant .overlay-div h2 {
+.main-restaurant .overlay-div .title-container .fav-icon-restaurant {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.main-restaurant .overlay-div .title-container #toggle {
+  display: none;
+}
+.main-restaurant .overlay-div .title-container #toggle:checked ~ label .fill {
+  opacity: 1;
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+.main-restaurant .overlay-div .category-menu {
+  opacity: 0;
+  transition: transform 0.5s ease-in-out 4s;
+}
+.main-restaurant .overlay-div .category-menu h2 {
   text-transform: uppercase;
   font-size: 16px;
   color: grey;
@@ -438,20 +564,19 @@ main .restaurants .restaurants-cards .card .fav-icon {
   padding-bottom: 1rem;
   position: relative;
 }
-.main-restaurant .overlay-div h2::after {
+.main-restaurant .overlay-div .category-menu h2::after {
   content: "";
   display: block;
   width: 50px;
   height: 2px; /* Épaisseur de la ligne */
-  background-color: green;
+  background-color: #99E2D0;
   position: absolute;
   bottom: 10px; /* Ajustez la position verticale du trait */
   left: 0; /* Ajustez la position horizontale du trait */
 }
-.main-restaurant .overlay-div article {
+.main-restaurant .overlay-div .category-menu article {
   overflow: hidden;
   display: flex;
-  /* Permet de fixer le prix en bas de la div */
   height: 69px;
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
   border-radius: 15px;
@@ -460,25 +585,26 @@ main .restaurants .restaurants-cards .card .fav-icon {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.main-restaurant .overlay-div article .description {
+.main-restaurant .overlay-div .category-menu article .description {
   display: flex;
   padding: 15px;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
 }
-.main-restaurant .overlay-div article .description h4, .main-restaurant .overlay-div article .description p {
+.main-restaurant .overlay-div .category-menu article .description h4, .main-restaurant .overlay-div .category-menu article .description p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.main-restaurant .overlay-div article .price {
+.main-restaurant .overlay-div .category-menu article .price {
   display: flex;
   margin-left: auto;
   align-items: flex-end;
   padding: 15px;
+  font-weight: bold;
 }
-.main-restaurant .overlay-div article .menu-item-check {
+.main-restaurant .overlay-div .category-menu article .menu-item-check {
   margin-right: -4rem;
   background-color: #99E2D0;
   width: 4rem;
@@ -490,13 +616,13 @@ main .restaurants .restaurants-cards .card .fav-icon {
   transition: margin-right 2s;
   flex-shrink: 0;
 }
-.main-restaurant .overlay-div article .menu-item-check i {
+.main-restaurant .overlay-div .category-menu article .menu-item-check i {
   background-color: white;
   border-radius: 15px;
   padding: 5px;
   color: #99E2D0;
 }
-.main-restaurant .overlay-div article:hover .menu-item-check {
+.main-restaurant .overlay-div .category-menu article:hover .menu-item-check {
   margin-right: 0;
 }
 
@@ -510,26 +636,4 @@ main .restaurants .restaurants-cards .card .fav-icon {
 
 .item3 {
   animation: fadeIn 4s ease 2s forwards;
-}
-
-.fill {
-  color: black;
-  cursor: pointer;
-}
-
-#toggle, #toggle1, #toggle2, #toggle3, #toggle4 {
-  display: none;
-}
-
-#toggle:checked ~ label .fill,
-#toggle1:checked ~ label .fill,
-#toggle2:checked ~ label .fill,
-#toggle3:checked ~ label .fill,
-#toggle4:checked ~ label .fill {
-  opacity: 1;
-  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */

@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <title>ohmyfood</title>
   </head>
   <body>
     <div class="preloader">
@@ -27,45 +28,46 @@
         <img src="./images/logo/ohmyfood.png" alt="Logo du site ohmyfood" />
         <div class="location">
           <i class="fa-solid fa-location-dot"></i>
-          <p>Paris,Belleville</p>
+          <input type="search" placeholder="Paris, Belleville" />
         </div>
     </header>
     <main>
       <section class="meal-reservation">
         <h1>Réservez le menu qui vous convient</h1>
-        <p>Decouvrez des restaurants d'exeption, selectionnés par nos soins</p>
+        <p>Decouvrez des restaurants d'exception, selectionnés par nos soins</p>
         <button class="action-button">Explorez nos restaurants</button>
       </section>
       <section class="meal-selection">
         <h2>Fonctionnement</h2>
-        <div class="button-container">
-          <button>
+        <ul class="button-container">
+          <li>
             <span class="number">1</span>
-            <i class="fa-solid fa-mobile-screen-button logo-button"></i>
+            <i class="fa-solid fa-mobile-screen-button logo-sel"></i>
             Choisissez un restaurant
-          </button>
-          <button>
+          </li>
+          <li>
             <span class="number">2</span>
-            <i class="fa-solid fa-list logo-button"></i>
+            <i class="fa-solid fa-list logo-sel"></i>
             Composez votre menu
-          </button>
-          <button>
+          </li>
+          <li>
             <span class="number">3</span>
-            <i class="fa-solid fa-store logo-button logo-button-purple"></i>
+            <i class="fa-solid fa-store logo-sel logo-sel-purple"></i>
             Degustez au restaurant
-          </button>
-        </div>
+          </li>
+        </ul>
       </section>
       <section class="restaurants">
         <h2>Restaurants</h2>
         <div class="restaurants-cards">
           <article class="card">
-            <a href="./pages/restaurant1.html">
               <div class="new-sticker"><p>Nouveau</p></div>
-              <img
-                src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                alt="Image de la chambre d'hôtel montrant un lit de l'Hôtel du port"
-              />
+              <a href="./pages/restaurant1.html">
+                <img
+                  src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                  alt="Image de la chambre d'hôtel montrant un lit de l'Hôtel du port"
+                />
+              </a>    
               <div class="card-content">
                 <h3 class="card-title">La palette du gout</h3>
                 <p class="card-subtitle">
@@ -74,15 +76,15 @@
               </div>
               <input id="toggle1" type="checkbox">
               <label for="toggle1" ><i class="fill fa-regular fa-heart fav-icon "></i></label>
-            </a>
           </article>
-          <article class="card">
-            <a href="./pages/restaurant2.html">
+          <article class="card">  
               <div class="new-sticker"><p>Nouveau</p></div>
-              <img
-                src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                alt="Image de la chambre d'hôtel montrant un lit de l'Hotel chez Amina"
-              />
+              <a href="./pages/restaurant2.html">
+                <img
+                  src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                  alt="Image de la chambre d'hôtel montrant un lit de l'Hotel chez Amina"
+                />
+              </a>
               <div class="card-content">
                 <h3 class="card-title">La note enchantée</h3>
                 <p class="card-subtitle">
@@ -91,14 +93,14 @@
               </div>
               <input id="toggle2" type="checkbox">
               <label for="toggle2" class="label1"><i class="fill fa-regular fa-heart fav-icon "></i></label>
-            </a>
           </article>
           <article class="card">
-            <a href="./pages/restaurant3.html">
-              <img
-                src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                alt="Image de la chambre d'hôtel montrant un lit de l'Hôtel Les mouettes"
-              />
+              <a href="./pages/restaurant3.html">
+                <img
+                  src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                  alt="Image de la chambre d'hôtel montrant un lit de l'Hôtel Les mouettes"
+                />
+             </a>
               <div class="card-content"> 
                 <h3 class="card-title">A la française</h3>
                 <p class="card-subtitle">
@@ -106,15 +108,15 @@
                 </p>
               </div>
               <input id="toggle3" type="checkbox">
-              <label for="toggle3"><i class="fill fa-regular fa-heart fav-icon "></i></label>
-            </a>
+              <label for="toggle3"><i class="fill fa-regular fa-heart fav-icon "></i></label>       
           </article>
           <article class="card">
-            <a href="./pages/restaurant4.html">
-              <img
-              src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                alt="Image de la chambre d'hôtel montrant un lit de l'Hôtel de la mer"
-              />
+              <a href="./pages/restaurant4.html">
+                <img
+                src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                  alt="Image de la chambre d'hôtel montrant un lit de l'Hôtel de la mer"
+                />
+              </a>
               <div class="card-content">
                 <h3 class="card-title">Le délice des sens</h3>
                 <p class="card-subtitle">
@@ -122,8 +124,7 @@
                 </p> 
               </div>
               <input id="toggle4" type="checkbox">
-              <label for="toggle4" id="label"><i class="fill fa-regular fa-heart fav-icon "></i></label>
-            </a>
+              <label for="toggle4" id="label"><i class="fill fa-regular fa-heart fav-icon "></i></label> 
           </article>
         </div>
       </section>
